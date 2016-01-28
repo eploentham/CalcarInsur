@@ -8,6 +8,7 @@ import java.util.ArrayList;
 
 /**
  * Created by ekapop on 1/28/2016.
+ *
  */
 public class ReadText {
     private static final String FILE_ENCODE = "UTF-8";
