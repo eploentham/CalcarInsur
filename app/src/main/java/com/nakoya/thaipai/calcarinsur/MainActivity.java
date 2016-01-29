@@ -20,6 +20,7 @@ public class MainActivity extends Activity {
         btnCar.setText(R.string.car);
         btnPiup210.setText(R.string.piup210);
         btnPiup320.setText(R.string.piup320);
+        btnVan.setText(R.string.van);
 
         btnCar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,14 +32,21 @@ public class MainActivity extends Activity {
         btnPiup210.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calCar = new Intent(MainActivity.this, CalCarActivity.class);
+                calCar = new Intent(MainActivity.this, CalPiup210Activity.class);
                 startActivity(calCar);
             }
         });
         btnPiup320.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                calCar = new Intent(MainActivity.this, CalCarActivity.class);
+                calCar = new Intent(MainActivity.this, CalPiup320Activity.class);
+                startActivity(calCar);
+            }
+        });
+        btnVan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calCar = new Intent(MainActivity.this, CalVanActivity.class);
                 startActivity(calCar);
             }
         });

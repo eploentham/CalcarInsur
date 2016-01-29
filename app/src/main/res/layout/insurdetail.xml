@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:focusable="false"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp" >
+
+            <EditText
+                android:id="@+id/iTpbi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tpbi"
+                android:layout_alignLeft="@+id/iTppd"
+                android:layout_alignRight="@+id/iTppd"
+                android:layout_below="@+id/iTppd"
+                android:ems="30"
+                android:inputType="number"
+                android:textSize="18sp" >
+
+            </EditText>
+
+            <TextView
+                android:id="@+id/tpbi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tppd"
+                android:layout_below="@+id/tppd"
+                android:layout_marginTop="20dp"
+                android:text="@string/TPBI"
+                android:textColor="@color/Red"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/damage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/tpbi"
+                android:layout_below="@+id/tpbi"
+                android:layout_marginTop="20dp"
+                android:text="@string/damage"
+                android:textColor="@color/Red"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/iDamage"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/damage"
+                android:layout_alignLeft="@+id/iTpbi"
+                android:layout_alignRight="@+id/iTpbi"
+                android:layout_below="@+id/iTpbi"
+                android:ems="30"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/pa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/damage"
+                android:layout_below="@+id/damage"
+                android:layout_marginTop="20dp"
+                android:text="@string/PA"
+                android:textColor="@color/Red"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/iPa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/pa"
+                android:layout_alignLeft="@+id/iDamage"
+                android:layout_alignRight="@+id/iDamage"
+                android:layout_below="@+id/iDamage"
+                android:ems="30"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/pa"
+                android:layout_below="@+id/pa"
+                android:layout_marginTop="20dp"
+                android:text="@string/ME"
+                android:textColor="@color/Red"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/iMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/me"
+                android:layout_alignLeft="@+id/iPa"
+                android:layout_below="@+id/iPa"
+                android:layout_toLeftOf="@+id/btClose"
+                android:ems="30"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/bailb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/me"
+                android:layout_below="@+id/me"
+                android:layout_marginTop="20dp"
+                android:text="@string/Bailbond"
+                android:textColor="@color/Red"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/iBail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/bailb"
+                android:layout_alignLeft="@+id/iMe"
+                android:layout_below="@+id/iMe"
+                android:layout_toLeftOf="@+id/btClose"
+                android:ems="30"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/od"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/bailb"
+                android:layout_below="@+id/bailb"
+                android:layout_marginTop="20dp"
+                android:text="@string/od"
+                android:textColor="@color/Red"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/iOd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/od"
+                android:layout_alignLeft="@+id/iBail"
+                android:layout_alignRight="@+id/iBail"
+                android:layout_below="@+id/iBail"
+                android:ems="30"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tpbi"
+                android:layout_toRightOf="@+id/btClose"
+                android:text="@string/attn"
+                android:textColor="@color/Red"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/damage"
+                android:layout_alignLeft="@+id/member"
+                android:text="@string/driverage"
+                android:textColor="@color/Red"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/regis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/pa"
+                android:layout_alignLeft="@+id/age"
+                android:text="@string/licenseplate"
+                android:textColor="@color/Red"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/me"
+                android:layout_alignLeft="@+id/regis"
+                android:text="@string/styleusecar"
+                android:textColor="@color/Red"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/fleed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/bailb"
+                android:layout_alignLeft="@+id/mode"
+                android:text="@string/Fleet"
+                android:textColor="@color/Red"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/ncb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/od"
+                android:layout_alignLeft="@+id/fleed"
+                android:text="@string/NCB"
+                android:textColor="@color/Red"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/p2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/od"
+                android:layout_toRightOf="@+id/iFleet"
+                android:text="@string/percen"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/iNcb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/od"
+                android:layout_alignLeft="@+id/iFleet"
+                android:layout_alignRight="@+id/iFleet"
+                android:layout_alignTop="@+id/iBail"
+                android:ems="30"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/iAgeDriver"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/age"
+                android:layout_alignRight="@+id/iName"
+                android:layout_alignTop="@+id/iTpbi"
+                android:ems="30"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/iRegis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/regis"
+                android:layout_alignLeft="@+id/iAgeDriver"
+                android:layout_alignRight="@+id/iAgeDriver"
+                android:layout_alignTop="@+id/iDamage"
+                android:ems="30"
+                android:inputType="text"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/iFleet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/p1"
+                android:layout_alignLeft="@+id/iMode"
+                android:layout_alignRight="@+id/iMode"
+                android:layout_alignTop="@+id/iMe"
+                android:ems="30"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/other"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iOd"
+                android:layout_toRightOf="@+id/btClose"
+                android:text="@string/Other"
+                android:textColor="@color/Red"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/iOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/p3"
+                android:layout_alignLeft="@+id/iNcb"
+                android:layout_alignRight="@+id/iNcb"
+                android:layout_alignTop="@+id/iOd"
+                android:ems="30"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/iName"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/tpbi"
+                android:layout_alignRight="@+id/iMode"
+                android:layout_alignTop="@+id/iTppd"
+                android:ems="30"
+                android:inputType="text"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/p3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/other"
+                android:layout_alignBottom="@+id/other"
+                android:layout_alignLeft="@+id/p2"
+                android:text="@string/percen"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/p1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/bailb"
+                android:layout_alignLeft="@+id/p2"
+                android:text="@string/percen"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/iMode"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/me"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/iPa"
+                android:layout_marginRight="35dp"
+                android:ems="30"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/od"
+                android:layout_below="@+id/od"
+                android:layout_marginTop="20dp"
+                android:text="@string/tp"
+                android:textColor="@color/Red"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/iPerson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/person"
+                android:layout_alignLeft="@+id/iOther"
+                android:layout_alignRight="@+id/iOther"
+                android:layout_alignTop="@+id/iTp"
+                android:ems="30"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/iTp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/tp"
+                android:layout_alignLeft="@+id/iOd"
+                android:layout_alignRight="@+id/iOd"
+                android:layout_below="@+id/iOd"
+                android:ems="30"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/person"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iTp"
+                android:layout_toRightOf="@+id/btClose"
+                android:text="@string/Person"
+                android:textColor="@color/Red"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/iTppd"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="20dp"
+                android:layout_toLeftOf="@+id/btClose"
+                android:ems="30"
+                android:inputType="number"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tppd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/iTppd"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="40dp"
+                android:text="@string/TPPD"
+                android:textColor="@color/Red"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btClose"
+                android:layout_width="80dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/person"
+                android:layout_centerHorizontal="true"
+                android:text="Close"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</LinearLayout>
