@@ -3,29 +3,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <Spinner
-        android:id="@+id/spinner1"
+        android:id="@+id/spinnerBrand"
         android:layout_width="250dp"
         android:layout_height="60dp"
         android:layout_alignParentLeft="true"
         android:layout_alignTop="@+id/viewMain" />
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/spinnerModel"
         android:layout_width="250sp"
         android:layout_height="60dp"
-        android:layout_alignLeft="@+id/spinner1"
-        android:layout_below="@+id/spinner1"
+        android:layout_alignLeft="@+id/spinnerBrand"
+        android:layout_below="@+id/spinnerBrand"
         android:layout_toLeftOf="@+id/viewMain" />
     <Spinner
-        android:id="@+id/spinner3"
+        android:id="@+id/spinnerYear"
         android:layout_width="250sp"
         android:layout_height="60dp"
-        android:layout_below="@+id/spinner2"
+        android:layout_below="@+id/spinnerModel"
         android:layout_toLeftOf="@+id/viewMain" />
     <View
         android:id="@+id/viewMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@+id/spinner1"
+        android:layout_toRightOf="@+id/spinnerBrand"
         android:background="@color/Gray" />
     <RelativeLayout
         android:id="@+id/canvas_view"
@@ -124,7 +124,7 @@
                 android:background="@color/Gray" >
 
                 <EditText
-                    android:id="@+id/input"
+                    android:id="@+id/txtInput"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -149,7 +149,7 @@
                 android:background="@color/Gray" >
 
                 <TextView
-                    android:id="@+id/tx1"
+                    android:id="@+id/txtInsur"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
@@ -169,7 +169,7 @@
                 android:background="@color/Gray" >
 
                 <TextView
-                    android:id="@+id/tx2"
+                    android:id="@+id/txtInsurTotal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
@@ -216,7 +216,7 @@
                 android:background="@color/Gray" >
 
                 <TextView
-                    android:id="@+id/tx3"
+                    android:id="@+id/txtRepairC"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
@@ -236,7 +236,7 @@
                 android:background="@color/Gray" >
 
                 <TextView
-                    android:id="@+id/tx4"
+                    android:id="@+id/txtRepairCTotal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
@@ -263,7 +263,7 @@
                 android:background="@color/Gray" >
 
                 <Button
-                    android:id="@+id/bt"
+                    android:id="@+id/btnCal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
@@ -285,7 +285,7 @@
                 android:background="@color/Gray" >
 
                 <TextView
-                    android:id="@+id/tx5"
+                    android:id="@+id/txtMin"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
@@ -305,7 +305,7 @@
                 android:background="@color/Gray" >
 
                 <TextView
-                    android:id="@+id/tx6"
+                    android:id="@+id/txtAvg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
@@ -325,7 +325,7 @@
                 android:background="@color/Gray" >
 
                 <TextView
-                    android:id="@+id/tx7"
+                    android:id="@+id/txtMax"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
@@ -339,8 +339,8 @@
         android:id="@+id/tv4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/spinner3"
-        android:layout_below="@+id/spinner3"
+        android:layout_alignLeft="@+id/spinnerYear"
+        android:layout_below="@+id/spinnerYear"
         android:layout_marginTop="20dp"
         android:text="@string/carage"
         android:textSize="20sp" />
@@ -422,7 +422,7 @@
         android:textSize="20sp" />
 
     <Button
-        android:id="@+id/btPrint"
+        android:id="@+id/btnPrint"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/btnDialog"
@@ -435,7 +435,7 @@
         android:id="@+id/btnDialog"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/spinner3"
+        android:layout_alignRight="@+id/spinnerYear"
         android:layout_below="@+id/sEnd"
         android:layout_marginTop="25dp"
         android:text="@string/Detail"

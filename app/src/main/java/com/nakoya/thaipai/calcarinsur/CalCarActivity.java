@@ -1,13 +1,17 @@
 package com.nakoya.thaipai.calcarinsur;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBarActivity;
+import android.app.Dialog;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -21,16 +25,16 @@ public class CalCarActivity extends Activity {
             R.drawable.a33,R.drawable.a34,R.drawable.a35,R.drawable.a36,R.drawable.a37,R.drawable.a38,R.drawable.a39,R.drawable.a40,
             R.drawable.a41,R.drawable.a42,R.drawable.a43,R.drawable.a44,R.drawable.a45,R.drawable.a46,R.drawable.a47,R.drawable.a48,
             R.drawable.a49,R.drawable.a50,R.drawable.a51,R.drawable.a52,R.drawable.a53,R.drawable.a54};
-    Spinner sp1,sp2,sp3;
+    Spinner spBrand,spModel,spYear;
     ArrayList<String> al1;
     List<String> al2 = new ArrayList<String>();
     List<String> al3 = new ArrayList<String>();
     List<String> al4 = new ArrayList<String>();
 
-    public TextView sStart,sEnd,tx1,tx2,tx3,tx4,sMax,sAvg,sMin,sAgecar,sMotor,sGroup;
-    public EditText input,iAgedrive,iFleet,iNcb,iOther,iOd,iTp,iName,iRegis,iMode,iMe,iTppd,iTpbi,iPa,iBail,iDamageX,iPersonNum;
+    public TextView sStart,sEnd,txtInsur,txtInsurTotal,txtRepairC,txtRepairCTotal,txtMax,txtAvg,txtMin,sAgecar,sMotor,sGroup;
+    public EditText txtInput,iAgedrive,iFleet,iNcb,iOther,iOd,iTp,iName,iRegis,iMode,iMe,iTppd,iTpbi,iPa,iBail,iDamageX,iPersonNum;
     public ImageView pic;
-    public Button bt,print;
+    public Button btnCal,btnPrint;
 
     public ReadText rFt = new ReadText("");
     public Formula sentAmount1 = new Formula();
@@ -52,9 +56,66 @@ public class CalCarActivity extends Activity {
 
     public static final Double FIX80=0.8;
     public static final Double FIX90=0.9;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_cal);
+        setContentView(R.layout.calinsur);
+        spBrand = (Spinner)findViewById(R.id.spinnerBrand);
+        spModel = (Spinner)findViewById(R.id.spinnerModel);
+        spYear = (Spinner)findViewById(R.id.spinnerYear);
+        btnCal = (Button)findViewById(R.id.btnCal);
+        btnPrint = (Button)findViewById(R.id.btnPrint);
+        txtInput = (EditText)findViewById(R.id.txtInput);
+        txtInsur = (TextView)findViewById(R.id.txtInput);
+        txtInsurTotal = (TextView)findViewById(R.id.txtInsurTotal);
+        txtRepairC = (TextView)findViewById(R.id.txtRepairC);
+        txtRepairCTotal = (TextView)findViewById(R.id.txtRepairCTotal);
+        txtMax = (TextView)findViewById(R.id.txtMax);
+        txtMin = (TextView)findViewById(R.id.txtMin);
+        txtAvg = (TextView)findViewById(R.id.txtAvg);
+
+
+        final Dialog diaCalCar = new Dialog(CalCarActivity.this);
+        diaCalCar.requestWindowFeature(diaCalCar.getWindow().FEATURE_NO_TITLE);
+        diaCalCar.setContentView(R.layout.insurdetail);
+        diaCalCar.setCancelable(true);
+
+        Button btnDia = (Button)findViewById(R.id.btnDialog);
+        btnDia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                diaCalCar.show();
+                Button btnClose = (Button)findViewById(R.id.btnClose);
+                btnClose.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        xx1 = formatter.format(Double.parseDouble(iTppd.getText().toString().replace(",","").trim()));
+                        xx2 = formatter.format(Double.parseDouble(iTpbi.getText().toString().replace(",","").trim()));
+                        xx3 = formatter.format(Double.parseDouble(iDamageX.getText().toString().replace(",","").trim()));
+                        xx4 = formatter.format(Double.parseDouble(iPa.getText().toString().replace(",","").trim()));
+                        xx5 = formatter.format(Double.parseDouble(iMe.getText().toString().replace(",","").trim()));
+                        xx6 = formatter.format(Double.parseDouble(iBail.getText().toString().replace(",","").trim()));
+                        xx7 = formatter.format(Double.parseDouble(iOd.getText().toString().replace(",","").trim()));
+                        xx8 = formatter.format(Double.parseDouble(iTp.getText().toString().replace(",","").trim()));
+
+                        iTppd.setText(xx1);
+                        iTpbi.setText(xx2);
+                        iDamageX.setText(xx3);
+                        iPa.setText(xx4);
+                        iMe.setText(xx5);
+                        iBail.setText(xx6);
+                        iOd.setText(xx7);
+                        iTp.setText(xx8);
+                        bmode = Integer.parseInt(iMode.getText().toString().trim());
+                        if(bmode == 110 || bmode == 120)
+                            diaCalCar.cancel();
+                        else{
+                            Toast.makeText(CalCarActivity.this, String.valueOf(R.string.msgcalinsur1), Toast.LENGTH_LONG).show();
+                        }
+                    }
+                });
+            }
+        });
     }
 }

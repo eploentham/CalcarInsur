@@ -109,7 +109,7 @@
                 android:layout_alignBottom="@+id/me"
                 android:layout_alignLeft="@+id/iPa"
                 android:layout_below="@+id/iPa"
-                android:layout_toLeftOf="@+id/btClose"
+                android:layout_toLeftOf="@+id/btnClose"
                 android:ems="30"
                 android:inputType="number"
                 android:textSize="18sp" />
@@ -132,7 +132,7 @@
                 android:layout_alignBottom="@+id/bailb"
                 android:layout_alignLeft="@+id/iMe"
                 android:layout_below="@+id/iMe"
-                android:layout_toLeftOf="@+id/btClose"
+                android:layout_toLeftOf="@+id/btnClose"
                 android:ems="30"
                 android:inputType="number"
                 android:textSize="18sp" />
@@ -165,7 +165,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/tpbi"
-                android:layout_toRightOf="@+id/btClose"
+                android:layout_toRightOf="@+id/btnClose"
                 android:text="@string/attn"
                 android:textColor="@color/Red"
                 android:textSize="20sp" />
@@ -281,7 +281,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/iOd"
-                android:layout_toRightOf="@+id/btClose"
+                android:layout_toRightOf="@+id/btnClose"
                 android:text="@string/Other"
                 android:textColor="@color/Red"
                 android:textSize="20sp" />
@@ -380,7 +380,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/iTp"
-                android:layout_toRightOf="@+id/btClose"
+                android:layout_toRightOf="@+id/btnClose"
                 android:text="@string/Person"
                 android:textColor="@color/Red"
                 android:textSize="20sp" />
@@ -391,7 +391,7 @@
                 android:layout_height="40dp"
                 android:layout_alignParentTop="true"
                 android:layout_marginTop="20dp"
-                android:layout_toLeftOf="@+id/btClose"
+                android:layout_toLeftOf="@+id/btnClose"
                 android:ems="30"
                 android:inputType="number"
                 android:textSize="18sp" />
@@ -408,7 +408,7 @@
                 android:textSize="20sp" />
 
             <Button
-                android:id="@+id/btClose"
+                android:id="@+id/btnClose"
                 android:layout_width="80dp"
                 android:layout_height="50dp"
                 android:layout_below="@+id/person"
