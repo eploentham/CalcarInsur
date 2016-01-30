@@ -31,7 +31,7 @@
         android:id="@+id/canvas_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/sEnd"
+        android:layout_alignBottom="@+id/txtFinished"
         android:layout_alignLeft="@+id/viewMain"
         android:layout_alignRight="@+id/viewMain"
         android:layout_alignTop="@+id/viewMain"
@@ -386,38 +386,38 @@
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/sMotor"
+        android:id="@+id/txtMachine"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/tv6"
-        android:layout_alignRight="@+id/sAgecar"
+        android:layout_alignRight="@+id/txtCarAge"
         android:text="@string/o"
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/sGroup"
+        android:id="@+id/txtCarGroup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/tv7"
-        android:layout_alignRight="@+id/sMotor"
+        android:layout_alignRight="@+id/txtMachine"
         android:text="@string/o"
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/sStart"
+        android:id="@+id/txtProtection"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/tv8"
-        android:layout_alignRight="@+id/sGroup"
+        android:layout_alignRight="@+id/txtCarGroup"
         android:text="@string/o"
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/sEnd"
+        android:id="@+id/txtFinished"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/tv8"
-        android:layout_alignRight="@+id/sStart"
+        android:layout_alignRight="@+id/txtProtection"
         android:text="@string/o"
         android:textSize="20sp" />
 
@@ -436,13 +436,13 @@
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/spinnerYear"
-        android:layout_below="@+id/sEnd"
+        android:layout_below="@+id/txtFinished"
         android:layout_marginTop="25dp"
         android:text="@string/Detail"
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/sAgecar"
+        android:id="@+id/txtCarAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/tv5"

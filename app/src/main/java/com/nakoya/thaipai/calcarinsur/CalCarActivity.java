@@ -3,6 +3,7 @@ package com.nakoya.thaipai.calcarinsur;
 import android.app.Activity;
 import android.app.Dialog;
 import android.os.Bundle;
+import android.view.TextureView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -31,8 +32,8 @@ public class CalCarActivity extends Activity {
     List<String> al3 = new ArrayList<String>();
     List<String> al4 = new ArrayList<String>();
 
-    public TextView sStart,sEnd,txtInsur,txtInsurTotal,txtRepairC,txtRepairCTotal,txtMax,txtAvg,txtMin,sAgecar,sMotor,sGroup;
-    public EditText txtInput,iAgedrive,iFleet,iNcb,iOther,iOd,iTp,iName,iRegis,iMode,iMe,iTppd,iTpbi,iPa,iBail,iDamageX,iPersonNum;
+    public TextView txtProtection,txtFinished,txtInsur,txtInsurTotal,txtRepairC,txtRepairCTotal,txtMax,txtAvg,txtMin,txtCarAge,txtMachine,txtCarGroup;
+    public EditText txtInput,txtDriverAge,txtFleet,txtNcb,iOther,iOd,iTp,txtName,txtRegis,txtStypeuseCar,txtMe,txtTppd,txtTpbi,txtPa,iBail,txtDamageX,txtPersonNum;
     public ImageView pic;
     public Button btnCal,btnPrint;
 
@@ -71,10 +72,27 @@ public class CalCarActivity extends Activity {
         txtInsurTotal = (TextView)findViewById(R.id.txtInsurTotal);
         txtRepairC = (TextView)findViewById(R.id.txtRepairC);
         txtRepairCTotal = (TextView)findViewById(R.id.txtRepairCTotal);
-        txtMax = (TextView)findViewById(R.id.txtMax);
-        txtMin = (TextView)findViewById(R.id.txtMin);
-        txtAvg = (TextView)findViewById(R.id.txtAvg);
+        txtMax = (TextView)findViewById(R.id.txtMax);   txtMax.setText(R.string.default0);
+        txtMin = (TextView)findViewById(R.id.txtMin);   txtMin.setText(R.string.default0);
+        txtAvg = (TextView)findViewById(R.id.txtAvg);   txtAvg.setText(R.string.default0);
+        txtCarAge = (TextView)findViewById(R.id.txtCarAge); txtCarAge.setText(R.string.default0);
+        txtCarGroup = (TextView)findViewById(R.id.txtCarGroup); txtCarAge.setText(R.string.default0);
+        txtMachine = (TextView)findViewById(R.id.txtMachine); txtMachine.setText(R.string.default0);
+        txtProtection = (TextView)findViewById(R.id.txtProtection); txtProtection.setText(R.string.default0);
+        txtFinished = (TextView)findViewById(R.id.txtFinished); txtFinished.setText(R.string.default0);
 
+        txtDriverAge = (EditText)findViewById(R.id.txtDriverAge);   txtDriverAge.setText(R.string.default0);
+        txtFleet = (EditText)findViewById(R.id.txtFleet);   txtFleet.setText(R.string.default0);
+        txtNcb = (EditText)findViewById(R.id.txtNcb);   txtNcb.setText(R.string.default0);
+        txtName = (EditText)findViewById(R.id.txtNcb);  txtName.setText(R.string.default0);
+        txtRegis = (EditText)findViewById(R.id.txtRegis);   txtRegis.setText(R.string.default0);
+        txtStypeuseCar = (EditText)findViewById(R.id.txtStypeuseCar);   txtStypeuseCar.setText(R.string.default0);
+        txtMe = (EditText)findViewById(R.id.txtMe); txtMe.setText(R.string.default0);
+        txtTppd = (EditText)findViewById(R.id.txtTppd); txtTppd.setText(R.string.default0);
+        txtTpbi = (EditText)findViewById(R.id.txtTpbi); txtTpbi.setText(R.string.default0);
+        txtPa = (EditText)findViewById(R.id.txtPa);  txtPa.setText(R.string.default0);
+        txtDamageX = (EditText)findViewById(R.id.txtDamage);    txtDamageX.setText(R.string.default0);
+        txtPersonNum = (EditText)findViewById(R.id.txtPerson);  txtPersonNum.setText(R.string.default0);
 
         final Dialog diaCalCar = new Dialog(CalCarActivity.this);
         diaCalCar.requestWindowFeature(diaCalCar.getWindow().FEATURE_NO_TITLE);
@@ -90,24 +108,24 @@ public class CalCarActivity extends Activity {
                 btnClose.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        xx1 = formatter.format(Double.parseDouble(iTppd.getText().toString().replace(",","").trim()));
-                        xx2 = formatter.format(Double.parseDouble(iTpbi.getText().toString().replace(",","").trim()));
-                        xx3 = formatter.format(Double.parseDouble(iDamageX.getText().toString().replace(",","").trim()));
-                        xx4 = formatter.format(Double.parseDouble(iPa.getText().toString().replace(",","").trim()));
-                        xx5 = formatter.format(Double.parseDouble(iMe.getText().toString().replace(",","").trim()));
+                        xx1 = formatter.format(Double.parseDouble(txtTppd.getText().toString().replace(",","").trim()));
+                        xx2 = formatter.format(Double.parseDouble(txtTpbi.getText().toString().replace(",","").trim()));
+                        xx3 = formatter.format(Double.parseDouble(txtDamageX.getText().toString().replace(",","").trim()));
+                        xx4 = formatter.format(Double.parseDouble(txtPa.getText().toString().replace(",","").trim()));
+                        xx5 = formatter.format(Double.parseDouble(txtMe.getText().toString().replace(",","").trim()));
                         xx6 = formatter.format(Double.parseDouble(iBail.getText().toString().replace(",","").trim()));
                         xx7 = formatter.format(Double.parseDouble(iOd.getText().toString().replace(",","").trim()));
                         xx8 = formatter.format(Double.parseDouble(iTp.getText().toString().replace(",","").trim()));
 
-                        iTppd.setText(xx1);
-                        iTpbi.setText(xx2);
-                        iDamageX.setText(xx3);
-                        iPa.setText(xx4);
-                        iMe.setText(xx5);
+                        txtTppd.setText(xx1);
+                        txtTpbi.setText(xx2);
+                        txtDamageX.setText(xx3);
+                        txtPa.setText(xx4);
+                        txtMe.setText(xx5);
                         iBail.setText(xx6);
                         iOd.setText(xx7);
                         iTp.setText(xx8);
-                        bmode = Integer.parseInt(iMode.getText().toString().trim());
+                        bmode = Integer.parseInt(txtStypeuseCar.getText().toString().trim());
                         if(bmode == 110 || bmode == 120)
                             diaCalCar.cancel();
                         else{

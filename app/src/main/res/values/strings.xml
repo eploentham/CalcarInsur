@@ -39,6 +39,7 @@
     <string name="Detail">Detail</string>
     <string name="Print">Print</string>
     <string name="msgcalinsur1">กรุณาใส่ ลักษณะการใช้รถ 110 และ 120</string>
+    <string name="default0">0</string>
 
     <color name="WhiteSmoke">#EEE9E9</color>
     <color name="Gray">#CFCFCF</color>

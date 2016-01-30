@@ -21,13 +21,13 @@
             android:layout_marginTop="2dp" >
 
             <EditText
-                android:id="@+id/iTpbi"
+                android:id="@+id/txtTpbi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/tpbi"
-                android:layout_alignLeft="@+id/iTppd"
-                android:layout_alignRight="@+id/iTppd"
-                android:layout_below="@+id/iTppd"
+                android:layout_alignLeft="@+id/txtTppd"
+                android:layout_alignRight="@+id/txtTppd"
+                android:layout_below="@+id/txtTppd"
                 android:ems="30"
                 android:inputType="number"
                 android:textSize="18sp" >
@@ -57,13 +57,13 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/iDamage"
+                android:id="@+id/txtDamage"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/damage"
-                android:layout_alignLeft="@+id/iTpbi"
-                android:layout_alignRight="@+id/iTpbi"
-                android:layout_below="@+id/iTpbi"
+                android:layout_alignLeft="@+id/txtTpbi"
+                android:layout_alignRight="@+id/txtTpbi"
+                android:layout_below="@+id/txtTpbi"
                 android:ems="30"
                 android:inputType="number"
                 android:textSize="18sp" />
@@ -80,13 +80,13 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/iPa"
+                android:id="@+id/txtPa"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/pa"
-                android:layout_alignLeft="@+id/iDamage"
-                android:layout_alignRight="@+id/iDamage"
-                android:layout_below="@+id/iDamage"
+                android:layout_alignLeft="@+id/txtDamage"
+                android:layout_alignRight="@+id/txtDamage"
+                android:layout_below="@+id/txtDamage"
                 android:ems="30"
                 android:inputType="number"
                 android:textSize="18sp" />
@@ -103,12 +103,12 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/iMe"
+                android:id="@+id/txtMe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/me"
-                android:layout_alignLeft="@+id/iPa"
-                android:layout_below="@+id/iPa"
+                android:layout_alignLeft="@+id/txtPa"
+                android:layout_below="@+id/txtPa"
                 android:layout_toLeftOf="@+id/btnClose"
                 android:ems="30"
                 android:inputType="number"
@@ -126,12 +126,12 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/iBail"
+                android:id="@+id/txtBail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/bailb"
-                android:layout_alignLeft="@+id/iMe"
-                android:layout_below="@+id/iMe"
+                android:layout_alignLeft="@+id/txtMe"
+                android:layout_below="@+id/txtMe"
                 android:layout_toLeftOf="@+id/btnClose"
                 android:ems="30"
                 android:inputType="number"
@@ -149,13 +149,13 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/iOd"
+                android:id="@+id/txtOd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/od"
-                android:layout_alignLeft="@+id/iBail"
-                android:layout_alignRight="@+id/iBail"
-                android:layout_below="@+id/iBail"
+                android:layout_alignLeft="@+id/txtBail"
+                android:layout_alignRight="@+id/txtBail"
+                android:layout_below="@+id/txtBail"
                 android:ems="30"
                 android:inputType="number"
                 android:textSize="18sp" />
@@ -225,53 +225,53 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/od"
-                android:layout_toRightOf="@+id/iFleet"
+                android:layout_toRightOf="@+id/txtFleet"
                 android:text="@string/percen"
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/iNcb"
+                android:id="@+id/txtNcb"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/od"
-                android:layout_alignLeft="@+id/iFleet"
-                android:layout_alignRight="@+id/iFleet"
-                android:layout_alignTop="@+id/iBail"
+                android:layout_alignLeft="@+id/txtFleet"
+                android:layout_alignRight="@+id/txtFleet"
+                android:layout_alignTop="@+id/txtBail"
                 android:ems="30"
                 android:inputType="number"
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/iAgeDriver"
+                android:id="@+id/txtDriverAge"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/age"
-                android:layout_alignRight="@+id/iName"
-                android:layout_alignTop="@+id/iTpbi"
+                android:layout_alignRight="@+id/txtName"
+                android:layout_alignTop="@+id/txtTpbi"
                 android:ems="30"
                 android:inputType="number"
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/iRegis"
+                android:id="@+id/txtRegis"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/regis"
-                android:layout_alignLeft="@+id/iAgeDriver"
-                android:layout_alignRight="@+id/iAgeDriver"
-                android:layout_alignTop="@+id/iDamage"
+                android:layout_alignLeft="@+id/txtDriverAge"
+                android:layout_alignRight="@+id/txtDriverAge"
+                android:layout_alignTop="@+id/txtDamage"
                 android:ems="30"
                 android:inputType="text"
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/iFleet"
+                android:id="@+id/txtFleet"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/p1"
-                android:layout_alignLeft="@+id/iMode"
-                android:layout_alignRight="@+id/iMode"
-                android:layout_alignTop="@+id/iMe"
+                android:layout_alignLeft="@+id/txtStypeuseCar"
+                android:layout_alignRight="@+id/txtStypeuseCar"
+                android:layout_alignTop="@+id/txtMe"
                 android:ems="30"
                 android:inputType="number"
                 android:textSize="18sp" />
@@ -280,31 +280,31 @@
                 android:id="@+id/other"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/iOd"
+                android:layout_alignBottom="@+id/txtOd"
                 android:layout_toRightOf="@+id/btnClose"
                 android:text="@string/Other"
                 android:textColor="@color/Red"
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/iOther"
+                android:id="@+id/txtOther"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/p3"
-                android:layout_alignLeft="@+id/iNcb"
-                android:layout_alignRight="@+id/iNcb"
-                android:layout_alignTop="@+id/iOd"
+                android:layout_alignLeft="@+id/txtNcb"
+                android:layout_alignRight="@+id/txtNcb"
+                android:layout_alignTop="@+id/txtOd"
                 android:ems="30"
                 android:inputType="number"
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/iName"
+                android:id="@+id/txtName"
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/tpbi"
-                android:layout_alignRight="@+id/iMode"
-                android:layout_alignTop="@+id/iTppd"
+                android:layout_alignRight="@+id/txtStypeuseCar"
+                android:layout_alignTop="@+id/txtTppd"
                 android:ems="30"
                 android:inputType="text"
                 android:textSize="18sp" />
@@ -329,12 +329,12 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/iMode"
+                android:id="@+id/txtStypeuseCar"
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
                 android:layout_above="@+id/me"
                 android:layout_alignParentRight="true"
-                android:layout_alignTop="@+id/iPa"
+                android:layout_alignTop="@+id/txtPa"
                 android:layout_marginRight="35dp"
                 android:ems="30"
                 android:inputType="number"
@@ -352,25 +352,25 @@
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/iPerson"
+                android:id="@+id/txtPerson"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/person"
-                android:layout_alignLeft="@+id/iOther"
-                android:layout_alignRight="@+id/iOther"
-                android:layout_alignTop="@+id/iTp"
+                android:layout_alignLeft="@+id/txtOther"
+                android:layout_alignRight="@+id/txtOther"
+                android:layout_alignTop="@+id/txtTp"
                 android:ems="30"
                 android:inputType="number"
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/iTp"
+                android:id="@+id/txtTp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@+id/tp"
-                android:layout_alignLeft="@+id/iOd"
-                android:layout_alignRight="@+id/iOd"
-                android:layout_below="@+id/iOd"
+                android:layout_alignLeft="@+id/txtOd"
+                android:layout_alignRight="@+id/txtOd"
+                android:layout_below="@+id/txtOd"
                 android:ems="30"
                 android:inputType="number"
                 android:textSize="18sp" />
@@ -379,14 +379,14 @@
                 android:id="@+id/person"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/iTp"
+                android:layout_alignBottom="@+id/txtTp"
                 android:layout_toRightOf="@+id/btnClose"
                 android:text="@string/Person"
                 android:textColor="@color/Red"
                 android:textSize="20sp" />
 
             <EditText
-                android:id="@+id/iTppd"
+                android:id="@+id/txtTppd"
                 android:layout_width="200dp"
                 android:layout_height="40dp"
                 android:layout_alignParentTop="true"
@@ -400,7 +400,7 @@
                 android:id="@+id/tppd"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/iTppd"
+                android:layout_alignBottom="@+id/txtTppd"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="40dp"
                 android:text="@string/TPPD"
