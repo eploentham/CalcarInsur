@@ -287,7 +287,29 @@ public class CalCarActivity extends Activity {
                                 INSURSMODECAR110 =sentAmount1.amount1(in1,in2);
                                 amount1 = (double)Math.ceil(INSURSMODECAR110*rateModeCar*rateMotorCar*rateDriverAge*rateCarAge*rateCapIsur*rateGroupCar*rateH*rateG*rateF);
                                 amount2 = sentAmount1.amount2(in1,amount1);
-                                Double odInput=Double.parseDouble(txtOd.getText().toString().replace(",","")),tpInput=Double.parseDouble(txtTp.getText().toString().replace(",",""));
+                                Double odInput=Double.parseDouble(txtOd.getText().toString().replace(",",""));
+                                Double tpInput=Double.parseDouble(txtTp.getText().toString().replace(",",""));
+                                Double fleed1 = Double.parseDouble(txtFleet.getText().toString());
+                                Double ncb1 = Double.parseDouble(txtNcb.getText().toString());
+                                Double other1 = Double.parseDouble(txtOther.getText().toString());
+                                amount3 = sentAmount1.amount3(odInput, tpInput, amount2, fleed1, ncb1, other1);
+                                amount4 =sentAmount1.amount4(amount3);
+                                Double INSURMODECAR111 = 8740.0;
+                                if(in1>=1&&in1<=5){
+                                    if(in2==5){
+                                        INSURMODECAR111+=(INSURMODECAR111*0.1);
+                                        amount11 = Math.ceil(INSURMODECAR111*rateModeCar*rateMotorCar*rateDriverAge*rateCarAge*rateCapIsur*rateGroupCar*rateF*rateG*rateH);
+                                        Double paAmt1=10.0, meAmt1=10.0,bailbontAmt1=10.0;
+                                        amount21 = amount11+(paAmt1+meAmt1+bailbontAmt1);
+                                        amount31 = sentAmount1.amount3(odInput, tpInput, amount21,fleed1, ncb1, other1);
+                                        amount41 = sentAmount1.amount4(amount31);
+                                        txtRepairC.setText(formatter.format(amount31));
+                                        txtRepairCTotal.setText(formatter1.format(amount41));
+                                    }
+                                }else{
+                                    txtRepairC.setText(R.string.default0);
+                                    txtRepairCTotal.setText(R.string.default0);
+                                }
 
                             }
                         }else{
