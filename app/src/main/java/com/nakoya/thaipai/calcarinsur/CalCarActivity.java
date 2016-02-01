@@ -252,6 +252,58 @@ public class CalCarActivity extends Activity {
                 });
             }
         });
+
+        btnCal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ReadText rFt = new ReadText("");
+                Integer tanInput=0;
+                bmode = Integer.parseInt(txtStypeuseCar.getText().toString().trim());
+                if(bmode==110||bmode==120){
+                    if(txtInput.getText().toString().trim().equals("")){
+                        tanInput=50000;
+                    }else{
+                        tanInput = Integer.parseInt(txtInput.getText().toString().trim().replaceAll(",",""));
+                        if(tanInput!=0){
+                            txtInput.setText(formatter.format(tanInput));
+                        }
+                        if(tanInput>=min&&tanInput<=max){
+                            rateModeCar = Double.parseDouble(rFt.getModeCar(getAssets(),txtStypeuseCar.getText().toString().trim()))/100;
+                            rateMotorCar = Double.parseDouble(rFt.getMotorCar(getAssets(), bTemp[3].toString().replace(",","")).trim())/100;
+                            rateDriverAge = Double.parseDouble(rFt.getDriverAge(getAssets(), txtDriverAge.getText().toString().trim(), numYear1))/100;
+                            rateCarAge = Double.parseDouble(rFt.getCarAge(getAssets(), txtCarAge.getText().toString().trim().replace("ปี", "")))/100;
+                            rateGroupCar = Double.parseDouble(rFt.getGroupCar(getAssets(), bTemp[4].toString().trim()))/100;
+                            rateCapIsur = Double.parseDouble(rFt.getTypeInsurance(getAssets(), tanInput.toString(),"1").toString().trim())/100;
+                            rateH = Double.parseDouble(rFt.getDamageProperty(getAssets(), txtTppd.getText().toString().trim().replace(",",""),""));
+                            rateF = Double.parseDouble(rFt.getDamagePerson(getAssets(), txtTpbi.getText().toString().trim().replace(",", ""), "1"));
+                            rateG = Double.parseDouble(rFt.getDamageAccient(getAssets(), txtDamageX.getText().toString().trim().replace(",",""),"1"));
+                            if(rateCapIsur==0){
+                                Toast.makeText(CalCarActivity.this,String.valueOf("คุณใส่ทุนประกันไม่ถูกต้อง"),Toast.LENGTH_LONG).show();
+                            }else{
+                                Integer in1=0,in2=0;
+                                in1 = Integer.parseInt(txtCarAge.getText().toString().trim().replaceAll("ปี",""));
+                                in2 = Integer.parseInt(bTemp[4].toString());
+                                Double INSURSMODECAR110 = 0.0;
+                                INSURSMODECAR110 =sentAmount1.amount1(in1,in2);
+                                amount1 = (double)Math.ceil(INSURSMODECAR110*rateModeCar*rateMotorCar*rateDriverAge*rateCarAge*rateCapIsur*rateGroupCar*rateH*rateG*rateF);
+                                amount2 = sentAmount1.amount2(in1,amount1);
+                                Double odInput=Double.parseDouble(txtOd.getText().toString().replace(",","")),tpInput=Double.parseDouble(txtTp.getText().toString().replace(",",""));
+
+                            }
+                        }else{
+                            txtInsur.setText(R.string.default0);
+                            txtInsurTotal.setText(R.string.default0);
+                            txtRepairC.setText(R.string.default0);
+                            txtRepairCTotal.setText(R.string.default0);
+                            Toast.makeText(CalCarActivity.this,String.valueOf("ใส่ค่าที่อยู่ระหว่าง "+formatter2.format(min)+" และ "+formatter2.format(max)),Toast.LENGTH_LONG).show();
+                        }
+                    }
+                }else{
+                    diaCalCar.show();
+                    Toast.makeText(CalCarActivity.this,String.valueOf("กรุณาใส่ ลักษณะการใช้รถ 110 และ 120"),Toast.LENGTH_LONG).show();
+                }
+            }
+        });
     }
     public class MyCustomAdapter extends ArrayAdapter<String> {
         public MyCustomAdapter(Context context, int textViewResourceId,String[] objects, Integer[] image) {super(context, textViewResourceId, objects);}
